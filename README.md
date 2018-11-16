@@ -9,7 +9,7 @@ This is a web application called SendIT which serves its users a possibilty to s
 different locations around the World...
 
 The link to the UI template
-https://mcfrank16.github.io/UI/index.html
+Add The link to Github Pages here
 
 ### API Endpoints
 > This involves primarily creating RESTful API endpoints.
