@@ -1,0 +1,80 @@
+.btn-save {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.entries-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.entries-container > div {
+    width: 80%;
+}
+
+.title {
+    margin-top: 110px;
+}
+
+.card  {
+    height: 150px;
+    background-color: white;
+    margin: 20px;
+}
+
+.card > div {
+    height: 50%;
+}
+
+.card-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.card-row > div {
+    width: 33.3%;
+    padding: 30px;
+}
+
+.card-row-split{
+    display: flex;
+    flex-direction: row;
+}
+
+.card-row-split > div {
+    width: 33.3%;
+}
+
+.border-bottom {
+    border-bottom: solid rgb(139, 69, 19) 2px;
+}
+
+.entry {
+    width: 70%;
+    background-color: white;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.brown {
+    color: saddlebrown;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+span {
+    background-color: saddlebrown;
+    font-size: 25px;
+    color: white;
+    padding: 20px 95px;
+}
+
+textarea {
+    width: 90%;
+    height: 30rem;
+    margin-top: 20px;
+    border: solid 1px saddlebrown;
+}
+

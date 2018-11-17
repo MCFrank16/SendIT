@@ -1,0 +1,49 @@
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    height: calc(100vh + 70px);
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-color {
+    background-color: rgb(141, 168, 93, 0.7);
+}
+
+.container > div {
+    width: 500px;
+    height: 400px;
+    margin: 20px;
+}
+
+.center {
+    text-align: center;
+}
+ 
+
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-login {
+    background-color: #35424a;
+    width: 94%;
+    height: 32px;
+    color: white;
+    border: 0px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.input-signup {
+    margin-bottom: 0;
+}
+
+.form-footer {
+    text-align: center;
+    
+}
