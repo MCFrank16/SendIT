@@ -1,7 +1,7 @@
 {
   "name": "sendit-develop",
   "version": "1.0.0",
-  "description": "SendIT courier Delivery APP | Andela developer Challenge",
+  "description": "SendIT Courier Delivery App",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,34 +12,13 @@
   },
   "keywords": [
     "SendIT",
-    "courier",
-    "Delivery",
-    "APP"
+    "Andela",
+    "Challenge"
   ],
   "author": "Frank C. Mutabazi",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/MCFrank16/SendIT/issues"
   },
-  "homepage": "https://github.com/MCFrank16/SendIT#readme",
-  "dependencies": {
-    "babel-watch": "^2.0.7",
-    "express": "^4.16.4"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.1.5",
-    "@babel/core": "^7.1.6",
-    "@babel/preset-env": "^7.1.6",
-    "chai": "^4.2.0",
-    "chai-http": "^4.2.0",
-    "chai-uuid": "^1.0.6",
-    "coveralls": "^3.0.2",
-    "eslint": "^5.9.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "mocha": "^5.2.0",
-    "nyc": "^13.1.0",
-    "prettier": "1.15.2",
-    "uuid": "^3.3.2"
-  }
+  "homepage": "https://github.com/MCFrank16/SendIT#readme"
 }
