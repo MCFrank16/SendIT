@@ -1,5 +1,6 @@
 
 import uuid from 'uuid';
+//import Parcel from '../Data/data';
 //const uuid = require('uuid');
 
 class SendIT {
@@ -9,7 +10,19 @@ class SendIT {
    * empty array to store in the parcels
    */
   constructor() {
-    this.parcels = [];
+    this.parcels = [
+      {
+      "id": "3557a7fb-bc66-4558-ae82-01737d471c6e",
+      "Name": "Samsung",
+      "Model": "87gh5",
+      "From": "China - Shanghai",
+      "To": "Kigali - Rwanda",
+      "NowAt": "Kigali",
+      "Status": "In Transit",
+      "UserID": 18,
+      "CreatedAt": "2018-11-18 21:50:34"
+  }
+];
   }
   /**
    * creation of a new Parcel method
