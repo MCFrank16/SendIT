@@ -25,4 +25,4 @@ https://mcfrank16.github.io/SendIT/UI/Template/index.html
 | GET    /api/v1/Users/:UserID  | Fetch a specific Parcel made by a specific user |
 
 
-#Andela Challenge
+#Andela Development Challenge
