@@ -9,7 +9,7 @@ This is a web application called SendIT which serves its users a possibilty to s
 different locations around the World...
 
 The link to the UI template
-https://mcfrank16.github.io/UI/index.html
+https://mcfrank16.github.io/SendIT/UI/Template/index.html
 
 ### API Endpoints
 > This involves primarily creating RESTful API endpoints.
@@ -24,4 +24,4 @@ https://mcfrank16.github.io/UI/index.html
 | GET    /api/v1/Users/:UserID  | Fetch a specific Parcel made by a specific user |
 
 
-#Andela Challenge
+#Andela Developer Challenge
