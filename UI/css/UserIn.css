@@ -1,0 +1,177 @@
+body{
+  font: 15px/1.5 Arial, Helvetica,sans-serif;
+  padding:0;
+  margin:0;    
+  background-color:darkcyan;
+}
+
+/* Global */
+.container{
+  width:80%;
+  margin:auto;
+  overflow:hidden;
+}
+
+ul{
+  margin:0;
+  padding:0;
+}
+/* Header **/
+header{
+  background:#ffffff;
+  color:#8B4513;
+  padding-top:30px;
+  min-height:70px;
+  
+}
+
+header a{
+  color:#A0522D;
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size:16px;
+}
+
+header li{
+  float:left;
+  display:inline;
+  padding: 0 20px 0 20px;
+}
+
+header #Name{
+  float:left;
+}
+
+header .SendIT{
+  font-family: cursive;
+}
+
+header #Name h1{
+  margin:0;
+}
+
+header nav{
+  float:right;
+  margin-top:10px;
+}
+
+header .SendIT, header .Hapa a{
+  color:#A0522D;
+  font-weight:bold;
+}
+
+header a:hover{
+  color:#87ceeb;
+  font-weight:bold;
+}
+
+/* Media Queries */
+@media(max-width: 768px){
+  header #Name,
+  header nav,
+  header nav li
+  header{
+    padding-bottom:20px;
+  }
+
+}
+
+.btn-logout {
+    padding: 0;
+    width: 70px;
+    margin-right: 20px;
+    margin-top: -50px;
+    color: saddlebrown;
+    background-color: white;
+    border: solid saddlebrown 1px;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: darkcyan; 
+    color: white;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    float: right;
+    margin: 55px;
+    position: relative;
+}
+
+.button1:hover {
+    background-color: saddlebrown;
+    border: 2px solid saddlebrown;
+
+    color: white;
+}
+
+ #customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    background: white; 
+    width: 95%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin: 0px auto;
+    border-radius: 0.5em;
+    overflow: hidden;
+ 
+     
+}
+
+#customers td, #customers th {
+    border: 2px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #35424a;
+    color: white;
+}
+
+.tile_div a {
+    display: block;
+    float: left;
+    height: 40px;
+    width: 75px;
+    margin-right: 5px;
+    background-color: #35424a;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.title_div a.last {
+    margin-right: 0;
+}
+
+.clear {
+    clear: both;
+}

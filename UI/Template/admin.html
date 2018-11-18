@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <style>
+       #customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    background: white; 
+    width: 95%;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin: 300px auto;
+    border-radius: 0.5em;
+    position: relative;       
+ 
+     
+}
+
+#customers td, #customers th {
+    border: 2px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #35424a;
+    color: white;
+}
+       
+.tile_div a {
+    display: block;
+    float: left;
+    height: 40px;
+    width: 75px;
+    margin-right: 5px;
+    background-color: #35424a;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.title_div a.last {
+    margin-right: 0;
+}
+
+.clear {
+    clear: both;
+}       
+    
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SendIT | Admin</title>
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/adimini.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/admin.css" />
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="header-brand"> Admin Panel</a>
+        <nav class="center">
+            <ul>
+                <li>
+                    <a href="">New Parcel</a>
+                </li>
+               
+                <li>
+                    <a href="">My Orders</a>
+                </li>
+                
+            </ul>
+            
+            <li class="nav-right">
+                    <button class="btn-logout">Logout</button>
+                </li>
+
+        </nav>
+    </header>
+    
+        <table id="customers">
+    
+  <tr>
+    <th>Date</th>
+    <th>Courier ID</th>
+    <th>From</th>
+    <th>To</th>
+    <th>Item</th>
+    <th>Status</th>
+    <th>Present Location</th>
+    <th style="width: 250px"; class="center">Action</th>
+  </tr>
+  <tr>
+    <td> 28th jan 2018</td>
+    <td>001</td>
+    <td>Germany</td>
+    <td>Rwanda</td>
+    <td>HPC088</td>
+    <td>On going</td>
+    <td>Mombasa port</td>
+    <td>
+        <div class="tile_div">
+    <a href="#">View</a>
+    <a href="#">Edit</a>
+    <a href="#" class="last">Cancel</a>
+    <div class="clear"></div>
+</div>   						
+    </td>
+    
+  </tr>
+  <tr>
+    <td> 28th jan 2018</td>
+    <td>001</td>
+    <td>Germany</td>
+    <td>Rwanda</td>
+    <td>HPC088</td>
+    <td>Delivered</td>
+    <td>Kigali Offices</td>
+    <td>
+        <div class="tile_div">
+    <a href="#">View</a>
+    <a href="#">Edit</a>
+    <a href="#" class="last">Cancel</a>
+    <div class="clear"></div>
+</div>   						
+    </td>
+  </tr>
+  <tr>
+    <td> 28th jan 2018</td>
+    <td>001</td>
+    <td>Germany</td>
+    <td>Rwanda</td>
+    <td>HPC088</td>
+    <td>Delivered</td>
+    <td>Shanghai Office</td>\<td>
+        <div class="tile_div">
+    <a href="#">View</a>
+    <a href="#">Edit</a>
+    <a href="#" class="last">Cancel</a>
+    <div class="clear"></div>
+</div>   						
+    </td>
+  </tr>
+</table>
+    
+
+    </body>
+</html>
