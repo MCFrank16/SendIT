@@ -1,6 +1,9 @@
 # SendIT
 SendIT Courier Delivery APP
 
+[![Build Status](https://https://travis-ci.org/MCFrank16/SendIT.svg?branch=Develop)](https://travis-ci.org/MCFrank16/SendIT)
+
+
 
 
 
