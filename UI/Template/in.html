@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<title> SendIT Login</title>
+	<title> SendIt | SendIT SignUP</title>
 	<link rel="shortcut icon" href="../img/favicon.ico">
 	
 	<link rel="stylesheet" type="text/css" href="../css/util.css">
@@ -20,24 +20,36 @@
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
 				<form class="login100-form validate-form">
 					<span class="login100-form-title p-b-33">
-						SendIT Login
+						SignUP
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="UserName" placeholder="Email" minlength="35">
+						<input class="input100" type="text" name="UserName" placeholder="UserName" minlength="35">
 						<span class="focus-input100-1"></span>
 						<span class="focus-input100-2"></span>
-					</div>
+                    </div>
+                    
+                    <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                            <input class="input100" type="text" name="UserName" placeholder="Email" minlength="35">
+                            <span class="focus-input100-1"></span>
+                            <span class="focus-input100-2"></span>
+                        </div>
 
 					<div class="wrap-input100 rs1 validate-input" data-validate="Password is required">
 						<input class="input100" type="password" name="pass" placeholder="Password">
 						<span class="focus-input100-1"></span>
 						<span class="focus-input100-2"></span>
-					</div>
+                    </div>
+                    
+                    <div class="wrap-input100 rs1 validate-input" data-validate="Password is required">
+                            <input class="input100" type="password" name="pass" placeholder="Confirm Password">
+                            <span class="focus-input100-1"></span>
+                            <span class="focus-input100-2"></span>
+                        </div>
 
 					<div class="container-login100-form-btn m-t-20">
-						<button type = "button" class="login100-form-btn" onclick="window.location.href='./UserIn.html'">
-							Sign in
+						<button class="login100-form-btn" type="button" onclick="window.location.href='./UserIn.html'">
+							Sign UP
 						</button>
 					</div>
 

@@ -1,12 +1,6 @@
-/*--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
 /* reset */
 html,body,div,applet,object,iframe,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
-article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+article, aside, details, figcaption, figure, header, hgroup, menu, nav, section {display: block;}
 ol,ul{list-style:none;margin:0px;padding:0px;}
 blockquote,q{quotes:none;}
 blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
@@ -40,7 +34,7 @@ body a:hover,body a{
 
 /*--- end reset code ---*/
 body {
-	background:url(../img/showcase.jpg);
+    background-color:darkcyan;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -62,7 +56,7 @@ h1.header-w3l {
 .content-agile{
     width: 52%;
     margin: 0 auto;
-    background-color: rgba(21, 20, 20, 0.53);
+    background-color: #35424a;
     padding: 50px;
 }
 .content-agile-three1 {
@@ -114,7 +108,7 @@ label.rating-w3l, h2.rating-w3l {
     position: relative;
 }
 .threesubmitaits input[type="submit"] {
-    padding: 12px 47px;
+    padding: 12px 165px;
     font-size: 15px;
     color: #fff;
     border: none;
@@ -122,14 +116,14 @@ label.rating-w3l, h2.rating-w3l {
     background: #36d4f4;
     letter-spacing: 1px;
     cursor: pointer;
-    margin-top: 30px;
+    margin-top: 25px;
     transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
 }
 .threesubmitaits input[type="submit"]:hover{
-    background: #000;
+    background:chocolate;
     transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
@@ -145,74 +139,6 @@ label.rating-w3l, h2.rating-w3l {
 .form-sub-1-w3l.formtwo {
     margin: 0 10px;
 }
-/*-- radio button --*/
-ul li label {
-    display: inline-block;
-    position: relative;
-    font-weight: 300;
-    text-transform: capitalize;
-    font-size: 16px;
-    padding: 13px 0 0 50px;
-    margin: 4px auto;
-    height: 24px;
-    letter-spacing: 1px;
-    z-index: 9;
-    cursor: pointer;
-}
-ul li .check{
-	display: block;
-    position: absolute;
-    border: 2px solid #fff;
-    border-radius: 100%;
-    height: 12px;
-    width: 12px;
-    top: 17px;
-    left: 15px;
-    z-index: 5;
-    transition: border .25s linear;
-    -webkit-transition: border .25s linear;
-}
-ul li .check::before {
-    display: block;
-    position: absolute;
-    content: '';
-    border-radius: 100%;
-    height: 4px;
-    width: 4px;
-    top: 4px;
-    left: 4px;
-    margin: auto;
-    transition: background 0.25s linear;
-    -webkit-transition: background 0.25s linear;
-}
-span {
-    color: #fff;
-}
-.grid-shop1-agile ul li,.grid-shop2-agile ul li{
-	color: #fff;
-    display: block;
-    position: relative;
-    height: 40px;
-}
-ul li input[type=radio]{
-	position: absolute;
-	visibility: hidden;
-}
-ul li:hover label{
-	color: #FFFFFF;
-}
-ul li:hover .check {
-	border: 2px solid #FFFFFF;
-}
-input[type=radio]:checked ~ .check {
-	border: 2px solid #36d4f4;
-}
-input[type=radio]:checked ~ .check::before{
-	background: #36d4f4;
-}
-input[type=radio]:checked ~ label{
-	color: #36d4f4;
-}
 /*-- //radio button --*/
 /*-- placeholder --*/
 ::-webkit-input-placeholder {
@@ -225,29 +151,6 @@ input[type=radio]:checked ~ label{
     color:#eee;  
 }
 /*-- //placeholder --*/
-/*-- copyright --*/
-p.copyright {
-    font-size: 15px;
-    text-align: center;
-    color: #fff;
-    margin:39px 0;
-    letter-spacing: 2px;
-}
-p.copyright a {
-    color:#36d4f4;
-    transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-}
-p.copyright a:hover {
-    color:#fff;
-    transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-}
-/*-- //copyright --*/
 
 /*--responsive--*/
 @media(max-width: 1440px){
@@ -278,9 +181,7 @@ p.copyright a:hover {
     .form-control-w3 input[type="email"], .form-control-w3 input[type="text"]{
         width: 92.5%;
     }
-    p.copyright {
-        margin: 30px 0;
-    }
+
 }
 @media(max-width: 1050px){
     .content-agile{
@@ -312,9 +213,7 @@ p.copyright a:hover {
         width: 47%;
         margin-right: 3%;
     }
-    p.copyright {
-        margin: 25px 0;
-    }
+
 }
 @media(max-width: 768px){
     .content-agile{
@@ -369,9 +268,6 @@ p.copyright a:hover {
 @media(max-width: 600px){
     .content-agile{
         width: 75%;
-    }
-    p.copyright {
-        letter-spacing: 1px;
     }
 }
 @media(max-width: 568px){
@@ -581,10 +477,10 @@ header a:hover{
     margin-top: -50px;
     color: saddlebrown;
     background-color: white;
-    border: solid saddlebrown 1px;
     width: 80px;
     height: 30px;
     border-radius: 5px;
+    font-size: 25px;
 }
 
 .container{
@@ -597,5 +493,11 @@ ul{
   margin:0;
   padding:0;
 }
+
+#ind{
+    font-size: 25px;
+  }
+
+  
 
 /*--//responsive--*/

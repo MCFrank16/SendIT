@@ -22,15 +22,15 @@
         </div>
         <nav>
           <ul>
-             <li class="Hapa" style="font-family: sans-serif";><a href="">Delivered</a></li>
-              <li class="Hapa" style="font-family: sans-serif";><a href="">In Transit</a></li>
-            <li><a href="#">Log OUT</a></li>
+             <li class="Hapa" style="font-family: sans-serif";><a href=""><strong id="ind">25</strong> Delivered</a></li>
+              <li class="Hapa" style="font-family: sans-serif";><a href=""><strong id="ind">25</strong> In Transit</a></li>
+            <li><a href="Login.html" class = "btn-logout">Log OUT</a></li>
           </ul>
         </nav>
       </div>
     </header>
     
-    <button class="button button1">Create New</button>
+    <button class="button button1" type="button" onclick="window.location.href= './create.html'">Create New</button>
     
     <table id="customers">
     
@@ -66,11 +66,11 @@
     <td>Germany</td>
     <td>Rwanda</td>
     <td>HPC088</td>
-    <td>On going</td>
+    <td>In Transit</td>
     <td>
         <div class="tile_div">
-    <a href="#">View</a>
-    <a href="#">Edit</a>
+    <a href="#" id="btn">View</a>
+    <a href="#" id = "btn">Edit</a>
     <a href="#" class="last">Cancel</a>
     <div class="clear"></div>
 </div>   						
@@ -92,8 +92,65 @@
     </td>
   </tr>
 </table>
+
+ <!--Edit Modal-->
+ <div id= "EditM" class="Modal">
+  <!--Content-->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class= "wrapper">
+    <h1 id="title-c" class="center-t"> Edit A Parcel</h1>
+    <form>
+      <div class="form-d">
+      <input type="text" id ="Edit-From" class="Edit-input" placeholder="From" required>
+      <input type="text" id ="Edit-To" class="Edit-input" placeholder="To" required>
+      <input type="text" id ="Edit-RN" class="Edit-input" placeholder="Recepient Name" required>
+      <input type="text" id ="Edit-RPN" class="Edit-input" placeholder="Phone Number" required>
+      <button id='E-button' class="action-button" type='submit' onclick="window.location.href='./UserIn.html'">Edit</button>
+      </div>
+    </form>
+
+    </div>
+
+     </div>
+
+  </div>
+
+  <!--View Modal-->
+ <div id= "ViewM" class="Modal2">
+    <!--Content-->
+    <div class="modal-content2">
+      <span class="close1">&times;</span>
+      <div class= "wrapper">
+      <h1 id="title-c" class="center-t"> View A Parcel</h1>
+      <form>
+        <div class="form-d">
+          
+          <label for = "name"><strong> Sender Name:</strong>    Frank</label>
+          <label for = "Email"> <strong>Email :</strong>   Frank@gmail.com</label>
+          <label for = "Number"> <strong>Number:</strong>   07889875554</label>
+          <label for = "name"><strong>Item Name:</strong>  Iphone</label>
+          <label for = "name"><strong>From:</strong>  Kigali</label>
+          <label for = "name"><strong>To:</strong> Gisenyi </label>
+          <label for = "name"><strong>Status:</strong> In Transit </label>
+          <label for = "name"> <strong>Receiver Name:</strong>  Brown</label>
+          <label for = "name"><strong>Receiver Phone Number:</strong>   0786553234</label>
+          
+        <button id='E-button' class="action-button" type='submit' onclick="window.location.href='./UserIn.html'">Go Edit</button>
+        </div>
+      </form>
+  
+      </div>
+  
+       </div>
+  
+    </div>
+
+  
     
 
 </body>
+<script src= "../js/edit.js" ></script>
+<script src="../js/view.js"></script>
 </html>
 

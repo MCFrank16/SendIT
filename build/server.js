@@ -1,31 +1,34 @@
-'use strict';
 
-var _express = require('express');
+const express = require('express');
 
-var _express2 = _interopRequireDefault(_express);
+const express2 = interopRequireDefault(express);
 
-var _Courier = require('./Server/Controllers/Courier');
+const Courier = require('./Server/Controllers/Courier');
 
-var _Courier2 = _interopRequireDefault(_Courier);
+const Courier2 = interopRequireDefault(Courier);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+const Users = require('./Server/Controllers/Users');
 
-//import cool from ('cool-ascii-faces')
+const Users2 = interopRequireDefault( Users);
 
-// server.js
-//import Parcel from './src/controllers/Courier';
-//import express from 'express';
+function interopRequireDefault(obj) { return obj && obj.esModule ? obj : { default: obj }; }
 
-var app = (0, _express2.default)();
+const app = (0, express2.default)();
 
-app.use(_express2.default.json());
-
-app.post('/api/v1/Parcels', _Courier2.default.create);
-app.get('/api/v1/Parcels', _Courier2.default.getAll);
-app.get('/api/v1/Parcels/:id', _Courier2.default.getOne);
-app.put('/api/v1/Parcels/:id', _Courier2.default.update);
-app.delete('/api/v1/Parcels/:id', _Courier2.default.delete);
-app.get('/api/v1/Users/:UserID', _Courier2.default.getUser);
+app.use(express2.default.json());
+// Parcel routes
+app.post('/api/v1/parcels', Courier2.default.create);
+app.get('/api/v1/parcels', Courier2.default.getAll);
+app.get('/api/v1/parcels/:id', Courier2.default.getOne);
+app.put('/api/v1/parcels/:id/cancel', Courier2.default.update);
+app.delete('/api/v1/parcels/:id', Courier2.default.delete);
+app.get('/api/v1/users/:UserID/parcels', Courier2.default.getUser);
+// User routes
+app.post('/api/v1/users', Users2.default.createUser);
+app.get('/api/v1/users', Users2.default.getAllUser);
+app.get('/api/v1/users/:id', Users2.default.getOneUser);
+app.put('/api/v1/users/:id/update-user', Users2.default.updateUser);
+app.delete('/api/v1/users/:id', Users2.default.deleteUser);
 
 app.listen(9000);
 console.log('app running on port ', 9000);
