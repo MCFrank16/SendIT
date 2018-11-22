@@ -33,6 +33,9 @@ class Parcel {
     const id = ParcelID || this.id;
     const parcel = ParcelData.find(p => p.id === id);
     const index = ParcelData.indexOf(parcel);
+    if (index === -1) {
+      return undefined;
+    }
     ParcelData[index].status = 'cancelled';
     return ParcelData[index];
   }

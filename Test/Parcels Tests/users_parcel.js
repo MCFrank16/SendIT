@@ -16,9 +16,28 @@ use(require('chai-uuid'));
 use(chaiHttp);
 
 describe('GET /api/v1/users/:UserID/parcels', () => {
-  it.skip('should return a message of no User found', (done) => {
+  let uid;
+  beforeEach((done) => {
     request(server)
-      .get('/api/v1/users/1/parcels')
+      .post('/api/v1/parcels')
+      .send({
+        name: 'Frankk',
+        from: 'Mutabazi',
+        to: 'Musanze',
+        status: 'In transit',
+        plocation: 'Kigali',
+        userID: 5,
+      })
+      .end((error, res) => {
+        // eslint-disable-next-line prefer-destructuring
+        uid = res.body.parcel.userID;
+        done();
+      });
+  });
+  it('should return a message of no User found', (done) => {
+    const j = Number.parseInt('1', 10);
+    request(server)
+      .get(`/api/v1/users/${j}/parcels`)
       .end((err, res) => {
         res.should.have.status(404);
         res.body.should.have.property('message').eql('User not found');
@@ -28,7 +47,7 @@ describe('GET /api/v1/users/:UserID/parcels', () => {
 
   it('should return a user based on UserID', (done) => {
     request(server)
-      .get('/api/v1/users/4/parcels')
+      .get(`/api/v1/users/${uid}/parcels`)
       .end((err, res) => {
         res.should.have.status(200);
         done();

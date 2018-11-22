@@ -61,7 +61,7 @@ const Deliver = {
     let parcel = new Parcel();
     parcel = parcel.findUser(userID);
     if (!parcel) {
-      return res.status(404).send({ message: 'Not found' });
+      return res.status(404).send({ message: 'Not User Records' });
     }
     return res.status(200).send({ message: 'Parcel Retrieved Successfully', Parcel: parcel });
   },

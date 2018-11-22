@@ -1,6 +1,6 @@
 // set the env variable to test during the test
 import {
-  should, expect, use, request,
+  should, use, request,
 } from 'chai';
 import chaiHttp from 'chai-http';
 import server from '../../server';
@@ -29,13 +29,12 @@ describe('POST /api/v1/parcels', () => {
 
   it('should create a new parcel', (done) => {
     const body = {
-      Name: 'Iphone',
-      Model: '99JJh',
-      From: 'Kigali',
-      To: 'Kigali',
-      NowAt: 'Kigali',
-      Status: 'Delivered',
-      UserID: 4,
+      name: 'Iphone M',
+      from: 'Cyangugu',
+      to: 'Kigali',
+      status: 'Delivered',
+      plocation: 'Kigali',
+      userID: 4,
     };
 
     request(server)
@@ -43,6 +42,8 @@ describe('POST /api/v1/parcels', () => {
       .send(body)
       .end((err, res) => {
         res.should.have.status(201);
+        res.body.should.be.a('object');
+        res.body.should.have.property('message').eql('parcel created');
         done();
       });
   });

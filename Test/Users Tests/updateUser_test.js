@@ -1,6 +1,6 @@
 // set the env variable to test during the test
 import {
-  should, expect, use, request,
+  should,use, request,
 } from 'chai';
 import chaiHttp from 'chai-http';
 import server from '../../server';

@@ -16,23 +16,44 @@ use(require('chai-uuid'));
 use(chaiHttp);
 
 describe('PUT /api/v1/parcels/:id/cancel', () => {
-  it('should return a message of no parcel found', (done) => {
+  let id;
+  beforeEach((done) => {
     request(server)
-      .put('/api/v1/parcels/:id/cancel')
+      .post('/api/v1/parcels')
+      .send({
+        name: 'Frankk',
+        from: 'Mutabazi',
+        to: 'Musanze',
+        status: 'In transit',
+        plocation: 'Kigali',
+        userID: 5,
+      })
+      .end((error, res) => {
+        // eslint-disable-next-line prefer-destructuring
+        id = res.body.parcel.id;
+        done();
+      });
+  });
+  it('should return a message of no parcel found', (done) => {
+    const idd = '1';
+    request(server)
+      .put(`/api/v1/parcels/${idd}/cancel`)
       .end((err, res) => {
         res.should.have.status(404);
-        res.body.should.have.property('message').eql('Parcel not found');
+        res.body.should.have.property('message').eql('Not found');
         done();
       });
   });
 
   it('should Update a parcel based on its ID', (done) => {
     request(server)
-      .put('/api/v1/parcels/3557a7fb-bc66-4558-ae82-01737d471c6e/cancel')
+      .put(`/api/v1/parcels/${id}/cancel`)
       .end((err, res) => {
         res.should.have.status(200);
         res.body.should.be.a('object');
-        expect('3557a7fb-bc66-4558-ae82-01737d471c6e').to.be.a.uuid('v4');
+        expect(id).to.be.a.uuid('v4');
+        res.body.should.have.property('message').eql('Parcel Cancelled Successfully');
+        res.body.Parcel.should.have.property('status').eql('cancelled');
         done();
       });
   });
