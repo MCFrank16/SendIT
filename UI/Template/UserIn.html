@@ -31,7 +31,7 @@
     </header>
     
     <button class="button button1" type="button" onclick="window.location.href= './create.html'">Create New</button>
-    
+ 
     <table id="customers">
     
   <tr>
@@ -41,7 +41,7 @@
     <th>To</th>
     <th>Item</th>
     <th>Status</th>
-    <th style="width: 250px"; class="center">Action</th>
+    <th style="width: 250px;text-align: center"; class="center">Action</th>
   </tr>
   <tr>
     <td> 28th jan 2018</td>
@@ -69,9 +69,9 @@
     <td>In Transit</td>
     <td>
         <div class="tile_div">
-    <a href="#" id="btn">View</a>
-    <a href="#" id = "btn">Edit</a>
-    <a href="#" class="last">Cancel</a>
+    <a href="#" id ="btn1">View</a>
+    <a href="#" id = "btn2">Edit</a>
+    <a href="#" class="last" onclick="myFunction();">Cancel</a>
     <div class="clear"></div>
 </div>   						
     </td>
@@ -91,6 +91,36 @@
 </div>   						
     </td>
   </tr>
+  <tr>
+      <td> 28th jan 2018</td>
+      <td>001</td>
+      <td>Germany</td>
+      <td>Rwanda</td>
+      <td>HPC088</td>
+      <td>Delivered</td>\<td>
+          <div class="tile_div">
+      <a href="#">View</a>
+      <a href="#">Edit</a>
+      <a href="#" class="last">Cancel</a>
+      <div class="clear"></div>
+  </div>   						
+      </td>
+    </tr>
+      <tr>
+          <td> 28th jan 2018</td>
+          <td>001</td>
+          <td>Germany</td>
+          <td>Rwanda</td>
+          <td>HPC088</td>
+          <td>Delivered</td>\<td>
+              <div class="tile_div">
+          <a href="#">View</a>
+          <a href="#">Edit</a>
+          <a href="#" class="last">Cancel</a>
+          <div class="clear"></div>
+      </div>   						
+          </td>
+        </tr>
 </table>
 
  <!--Edit Modal-->
@@ -106,7 +136,7 @@
       <input type="text" id ="Edit-To" class="Edit-input" placeholder="To" required>
       <input type="text" id ="Edit-RN" class="Edit-input" placeholder="Recepient Name" required>
       <input type="text" id ="Edit-RPN" class="Edit-input" placeholder="Phone Number" required>
-      <button id='E-button' class="action-button" type='submit' onclick="window.location.href='./UserIn.html'">Edit</button>
+      <button id='E-button' class="action-button" type='submit' onclick="window.location.href='./UserIn.html'">Save</button>
       </div>
     </form>
 
@@ -120,7 +150,7 @@
  <div id= "ViewM" class="Modal2">
     <!--Content-->
     <div class="modal-content2">
-      <span class="close1">&times;</span>
+      <span class="close">&times;</span>
       <div class= "wrapper">
       <h1 id="title-c" class="center-t"> View A Parcel</h1>
       <form>
@@ -136,7 +166,7 @@
           <label for = "name"> <strong>Receiver Name:</strong>  Brown</label>
           <label for = "name"><strong>Receiver Phone Number:</strong>   0786553234</label>
           
-        <button id='E-button' class="action-button" type='submit' onclick="window.location.href='./UserIn.html'">Go Edit</button>
+        <button id='E-button' class="action-button" type='submit' onclick="window.location.href='./UserIn.html'">Close</button>
         </div>
       </form>
   
@@ -152,5 +182,10 @@
 </body>
 <script src= "../js/edit.js" ></script>
 <script src="../js/view.js"></script>
+<script>
+  function myFunction() {
+    confirm("Are You sure you want to cancel this Parcel");
+}
+</script>
 </html>
 

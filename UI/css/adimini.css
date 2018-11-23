@@ -142,3 +142,10 @@ input {
     float: right;
 }
 
+#msg{
+    font-size: 20px;
+    margin: 5px;
+    color: whitesmoke;
+}
+
+

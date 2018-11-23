@@ -54,8 +54,8 @@
 
 .clear {
     clear: both;
-}       
-    
+}    
+     
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -78,6 +78,9 @@
         </nav>
     </header>
     
+
+    
+    
         <table id="customers">
     
   <tr>
@@ -85,24 +88,24 @@
     <th>Courier ID</th>
     <th>From</th>
     <th>To</th>
-    <th>Item Code</th>
+    <th>Item Name</th>
     <th>Status</th>
     <th>Present Location</th>
-    <th style="width: 250px"; class="center">Action</th>
+    <th style="width: 250px;text-align:center;" class="center">Action</th>
   </tr>
   <tr>
     <td> 28th jan 2018</td>
     <td>001</td>
     <td>Kigali</td>
     <td>Ruhango</td>
-    <td>HPC088</td>
+    <td>Iphone X</td>
     <td>On going</td>
     <td>Nyanza Office</td>
     <td>
     <div class="tile_div">
     <a href="#">View</a>
-    <a href="#">Edit</a>
-    <a href="#">Cancel</a>
+    <a href="#" id= "btn2">Edit</a>
+    <a href="#" onclick="myFunction();" >Cancel</a>
 
     <div class="clear"></div>
 </div>   						
@@ -114,7 +117,7 @@
     <td>001</td>
     <td>Cyangungu</td>
     <td>Nyagatare</td>
-    <td>HPC088</td>
+    <td>Samsung S9</td>
     <td>Delivered</td>
     <td>Kigali Offices</td>
     <td>
@@ -131,7 +134,7 @@
     <td>001</td>
     <td>Kigali</td>
     <td>Muhanga</td>
-    <td>HPC088</td>
+    <td>HP computer</td>
     <td>Delivered</td>
     <td>Muhanga Office</td>\<td>
         <div class="tile_div">
@@ -142,8 +145,119 @@
 </div>   						
     </td>
   </tr>
+  <tr>
+        <td> 28th jan 2018</td>
+        <td>001</td>
+        <td>Kigali</td>
+        <td>Muhanga</td>
+        <td>HP computer</td>
+        <td>Delivered</td>
+        <td>Muhanga Office</td>\<td>
+            <div class="tile_div">
+        <a href="#">View</a>
+        <a href="#">Edit</a>
+        <a href="#">Cancel</a>
+        <div class="clear"></div>
+    </div>   						
+        </td>
+      </tr>
+      <tr>
+            <td> 28th jan 2018</td>
+            <td>001</td>
+            <td>Kigali</td>
+            <td>Muhanga</td>
+            <td>HP computer</td>
+            <td>Delivered</td>
+            <td>Muhanga Office</td>\<td>
+                <div class="tile_div">
+            <a href="#">View</a>
+            <a href="#">Edit</a>
+            <a href="#">Cancel</a>
+            <div class="clear"></div>
+        </div>   						
+            </td>
+          </tr>
+          <tr>
+                <td> 28th jan 2018</td>
+                <td>001</td>
+                <td>Kigali</td>
+                <td>Muhanga</td>
+                <td>HP computer</td>
+                <td>Delivered</td>
+                <td>Muhanga Office</td>\<td>
+                    <div class="tile_div">
+                <a href="#">View</a>
+                <a href="#">Edit</a>
+                <a href="#">Cancel</a>
+                <div class="clear"></div>
+            </div>   						
+                </td>
+              </tr>
 </table>
+
+<!--Edit Modal-->
+<div id= "EditM" class="Modal">
+    <!--Content-->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class= "wrapper">
+      <h1 id="title-c" class="center-t"> Edit A Parcel</h1>
+      <form>
+        <div class="form-d">
+        <input type="text" id ="Edit-From" class="Edit-input" placeholder="From" required>
+        <input type="text" id ="Edit-To" class="Edit-input" placeholder="To" required>
+        <input type="text" id ="Edit-RN" class="Edit-input" placeholder="Recepient Name" required>
+        <input type="text" id ="Edit-RPN" class="Edit-input" placeholder="Phone Number" required>
+        <button id='E-button' class="action-button" type='submit' onclick="window.location.href='./UserIn.html'">Save</button>
+        </div>
+      </form>
+  
+      </div>
+  
+       </div>
+  
+    </div>
+  
+    <!--View Modal-->
+   <div id= "ViewM" class="Modal2">
+      <!--Content-->
+      <div class="modal-content2">
+        <span class="close">&times;</span>
+        <div class= "wrapper">
+        <h1 id="title-c" class="center-t"> View A Parcel</h1>
+        <form>
+          <div class="form-d">
+            
+            <label for = "name"><strong> Sender Name:</strong>    Frank</label>
+            <label for = "Email"> <strong>Email :</strong>   Frank@gmail.com</label>
+            <label for = "Number"> <strong>Number:</strong>   07889875554</label>
+            <label for = "name"><strong>Item Name:</strong>  Iphone</label>
+            <label for = "name"><strong>From:</strong>  Kigali</label>
+            <label for = "name"><strong>To:</strong> Gisenyi </label>
+            <label for = "name"><strong>Status:</strong> In Transit </label>
+            <label for = "name"> <strong>Receiver Name:</strong>  Brown</label>
+            <label for = "name"><strong>Receiver Phone Number:</strong>   0786553234</label>
+            
+          <button id='E-button' class="action-button" type='submit' onclick="window.location.href='./UserIn.html'">Close</button>
+          </div>
+        </form>
+    
+        </div>
+    
+         </div>
+    
+      </div>
+  
+
+
     
 
     </body>
+    <script src="../js/AdEdit.js"></script>
+    <script>
+            function myFunction() {
+              confirm("Are You sure you want to cancel this Parcel");
+          }
+          </script>
+          
 </html>
