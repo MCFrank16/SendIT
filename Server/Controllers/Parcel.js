@@ -1,6 +1,7 @@
 
 import uuid from 'uuid';
 import { ParcelData, Parcel } from '../Data/Parcel';
+import { UserData, User } from '../Data/Users';
 
 
 const Deliver = {
@@ -58,11 +59,13 @@ const Deliver = {
   // get all parcels made by a single user
   findbyUser(req, res) {
     const { userID } = req.params;
-    let parcel = new Parcel();
-    parcel = parcel.findUser(userID);
-    if (!parcel) {
+    let user = new User();
+    user = user.findOneUser(userID);
+    if (!user) {
       return res.status(404).send({ message: 'Not User Records' });
     }
+    let parcel = new Parcel();
+    parcel = parcel.findUser(userID);
     return res.status(200).send({ message: 'Parcel Retrieved Successfully', Parcel: parcel });
   },
 };

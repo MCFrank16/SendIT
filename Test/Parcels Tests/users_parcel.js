@@ -1,6 +1,6 @@
 // set the env variable to test during the test
 import {
-  should, expect, use, request,
+  should, use, request,
 } from 'chai';
 import chaiHttp from 'chai-http';
 import server from '../../server';
@@ -35,12 +35,12 @@ describe('GET /api/v1/users/:UserID/parcels', () => {
       });
   });
   it('should return a message of no User found', (done) => {
-    const j = Number.parseInt('1', 10);
     request(server)
-      .get(`/api/v1/users/${j}/parcels`)
+      .get('/api/v1/users/111/parcels')
       .end((err, res) => {
+        console.log(res.body);
         res.should.have.status(404);
-        res.body.should.have.property('message').eql('User not found');
+        res.body.should.have.property('message').eql('Not User Records');
         done();
       });
   });

@@ -1,6 +1,7 @@
 
 import uuid from 'uuid';
 import { UserData, User } from '../Data/Users';
+import { Parcel } from '../Data/Parcel';
 
 
 const yuzer = {
@@ -45,14 +46,14 @@ const yuzer = {
 
   updateUser(req, res) {
     const { id } = req.params;
-    let user = new User();
-    user = user.updateoneUser(id);
-    if (!user) {
-      return res.status(404).send({ message: 'User Not found' });
+    const { body } = req;
+    let uza = new User();
+    console.log(id);
+    uza = uza.updateOneUser(id, body);
+    if (!uza) {
+      return res.status(404).send({ message: 'Not update' });
     }
-    return res.status(200).send({ message: 'User Updated Successfully', Parcel: user });
+    return res.status(200).send({ message: 'Records Found', Update: uza });
   },
 };
-
-
 export default yuzer;

@@ -24,14 +24,18 @@ class User {
     return uuser;
   }
 
-  updateoneUser(UzaID) {
-    const id = UzaID || this.id;
-    const user = UserData.find(k => k.id === id);
-    const index = UserData.indexOf(user);
-    UserData[index].firstName = this.firstName || user.firstName;
-    UserData[index].lastName = this.lastName || user.lastName;
-    UserData[index].email = this.email || user.email;
-    UserData[index].userName = this.userName || user.userName;
+  updateOneUser(UzaID, ser) {
+    const idi = UzaID || this.id;
+    const data = UserData.find(c => c.id === idi);
+    const index = UserData.indexOf(data);
+    if (index === -1) {
+      return undefined;
+    }
+    UserData[index].firstName = ser.firstName;
+    UserData[index].lastName = ser.lastName;
+    UserData[index].email = ser.email;
+    UserData[index].password = ser.password;
+    UserData[index].userName = ser.userName;
     return UserData[index];
   }
 }
