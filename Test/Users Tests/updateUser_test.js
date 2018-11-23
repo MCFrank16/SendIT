@@ -28,7 +28,7 @@ describe('Test Update Users', () => {
       })
       .end((error, res) => {
         // eslint-disable-next-line prefer-destructuring
-        id = res.body.Update.id;
+        id = res.body.ser.id;
         console.log(res.body);
         done();
       });
